@@ -2,6 +2,7 @@ import { VStack, Stack, Center, Heading, Text, Box } from "@chakra-ui/react";
 import AlphadropBox from "./AlphadropBox";
 import ArticlesList from "./ArticlesList";
 import Balances from "./Balances";
+import BuyPoolBox from "./BuyPoolBox";
 import DGVCPrice from "./DGVCPrice";
 import TopLinks from "./TopLinks";
 
@@ -30,17 +31,8 @@ function MainArea() {
             <Balances />
             <ArticlesList />
           </Box>
-          <Box flex={1} pb="2" border="1.5px solid white" rounded="1rem">
-            <Center pt={10} px={6}>
-              <VStack spacing={8}>
-                <Heading as="h2" fontWeight="semibold">
-                  Heading
-                </Heading>
-                <Text whiteSpace="pre-wrap" textAlign="center">
-                  desc
-                </Text>
-              </VStack>
-            </Center>
+          <Box flex={1} pb="2">
+            <BuyPoolBox />
           </Box>
         </Stack>
       </Box>
