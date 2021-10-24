@@ -1,12 +1,4 @@
-import {
-  VStack,
-  Stack,
-  Center,
-  Heading,
-  Text,
-  Box,
-  Link,
-} from "@chakra-ui/react";
+import { VStack, Text, Link } from "@chakra-ui/react";
 
 function ArticlesList() {
   return (
