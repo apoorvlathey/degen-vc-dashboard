@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <HStack>
+    <HStack spacing="0">
       <Sidebar />
       <MainArea />
     </HStack>
