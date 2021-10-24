@@ -16,7 +16,7 @@ const SocialIcon = ({ link, icon }: { link: string; icon: IconDefinition }) => (
 
 function Sidebar() {
   return (
-    <VStack bg="#261E35" px="1.5rem" h="100vh" color="white">
+    <VStack flex="1" bg="#261E35" px="1.5rem" minH="100vh" color="white">
       <Link pt="2rem" href="/">
         <Image src="/images/degen-vc-logo.png" w="3rem" />
       </Link>
