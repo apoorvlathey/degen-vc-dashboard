@@ -24,9 +24,9 @@ function MainArea() {
           direction="row"
           alignItems="stretch"
           justifyContent="space-between"
-          spacing="4rem"
+          spacing="2rem"
         >
-          <Box flex={1} pb="2" maxW="30rem">
+          <Box flex={1} pb="2" maxW="34rem">
             <DGVCPrice />
             <Balances />
             <ArticlesList />

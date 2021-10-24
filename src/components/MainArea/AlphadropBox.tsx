@@ -11,10 +11,24 @@ function AlphadropBox() {
     const diff = _diff.toObject();
 
     if (_diff.toMillis() < 0) {
-      return `0D:0H:0M`;
+      return `00D:00H:00M`;
     }
 
-    return `${diff.days}D:${diff.hours}H:${diff.minutes?.toFixed()}M`;
+    let days = diff.days?.toString();
+    let hours = diff.hours?.toString();
+    let minutes = diff.minutes?.toFixed();
+
+    if (days?.length === 1) {
+      days = "0" + days;
+    }
+    if (hours?.length === 1) {
+      hours = "0" + hours;
+    }
+    if (minutes?.length === 1) {
+      minutes = "0" + minutes;
+    }
+
+    return `${days}D:${hours}H:${minutes}M`;
   };
 
   const [timer, setTimer] = useState(getTimeLeft());
