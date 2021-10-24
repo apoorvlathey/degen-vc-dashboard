@@ -34,10 +34,10 @@ function AlphadropBox() {
   const [timer, setTimer] = useState(getTimeLeft());
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    setInterval(() => {
       setTimer(getTimeLeft());
     }, 1000);
-  });
+  }, []);
 
   return (
     <Box pt="2rem" w="100%">

@@ -2,7 +2,7 @@ import { VStack, Link, Image } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDiscord,
-  faTelegram,
+  faTelegramPlane,
   faTwitter,
   faMediumM,
   IconDefinition,
@@ -25,7 +25,7 @@ function Sidebar() {
           link="https://discord.com/invite/qK8uUqc9Jd"
           icon={faDiscord}
         />
-        <SocialIcon link="https://t.me/degenvc" icon={faTelegram} />
+        <SocialIcon link="https://t.me/degenvc" icon={faTelegramPlane} />
         <SocialIcon link="https://twitter.com/degen_vc" icon={faTwitter} />
         <SocialIcon link="https://medium.com/degen-vc" icon={faMediumM} />
       </VStack>

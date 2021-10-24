@@ -3,7 +3,7 @@ import { HStack, VStack, Text, Button, Box, Link } from "@chakra-ui/react";
 const Btn = ({ text, href }: { text: string; href: string }) => (
   <Link href={href} isExternal>
     <Button
-      as="a"
+      as="span"
       w="15rem"
       textTransform="uppercase"
       bgGradient="linear(to-r, #141E30, #243B55)"
