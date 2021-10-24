@@ -4,9 +4,9 @@ function DGVCPrice() {
   return (
     <HStack
       border="1.5px solid white"
-      py="3rem"
+      py="4rem"
       px="5rem"
-      fontSize="xl"
+      fontSize="2xl"
       rounded="xl"
     >
       <Text>$DGVC</Text>

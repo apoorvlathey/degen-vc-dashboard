@@ -4,6 +4,8 @@ import ArticlesList from "./ArticlesList";
 import Balances from "./Balances";
 import BuyPoolBox from "./BuyPoolBox";
 import DGVCPrice from "./DGVCPrice";
+import FAQ from "./FAQ";
+import LPInfoCard from "./LPInfoCard";
 import TopLinks from "./TopLinks";
 
 function MainArea() {
@@ -33,6 +35,29 @@ function MainArea() {
           </Box>
           <Box flex={1} pb="2">
             <BuyPoolBox />
+            <Stack
+              direction="row"
+              pt="2rem"
+              alignItems="stretch"
+              justifyContent="space-between"
+              spacing="2rem"
+            >
+              <LPInfoCard
+                poolName="DGVC:USDC"
+                poolPercentage={4.569}
+                tvl={340}
+                dgvcValue={11}
+                lpValue={22}
+              />
+              <LPInfoCard
+                poolName="DGVC:WBTC"
+                poolPercentage={3.985}
+                tvl={319}
+                dgvcValue={33}
+                lpValue={44}
+              />
+            </Stack>
+            <FAQ />
           </Box>
         </Stack>
       </Box>

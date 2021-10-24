@@ -1,4 +1,4 @@
-import { VStack, HStack, Text, Spacer, Box, Heading } from "@chakra-ui/react";
+import { HStack, Text, Spacer, Box, Heading } from "@chakra-ui/react";
 
 const TokenBalance = ({
   tokenName,
@@ -7,7 +7,7 @@ const TokenBalance = ({
   tokenName: string;
   balance: string;
 }) => (
-  <HStack fontSize="xl">
+  <HStack fontSize="xl" pb="0.5rem">
     <Text textTransform="uppercase">{tokenName}</Text>
     <Spacer />
     <Text>{balance}</Text>
@@ -17,7 +17,7 @@ const TokenBalance = ({
 function Balances() {
   return (
     <Box pt="2rem">
-      <Box border="1.5px solid white" py="1.5rem" px="2rem" rounded="xl">
+      <Box border="1.5px solid white" p="1.5rem" px="2rem" rounded="xl">
         <Heading fontSize="2xl" pb="1rem">
           Balances
         </Heading>

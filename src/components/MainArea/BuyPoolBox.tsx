@@ -1,42 +1,45 @@
-import { HStack, VStack, Text, Button, Box } from "@chakra-ui/react";
+import { HStack, VStack, Text, Button, Box, Link } from "@chakra-ui/react";
 
-const Btn = ({ text }: { text: string }) => (
-  <Button
-    w="15rem"
-    textTransform="uppercase"
-    bgGradient="linear(to-r, #141E30, #243B55)"
-    _hover={{
-      bgGradient: "linear(to-r, #1e3c72, #2a5298)",
-    }}
-  >
-    {text}
-  </Button>
+const Btn = ({ text, href }: { text: string; href: string }) => (
+  <Link href={href} isExternal>
+    <Button
+      as="a"
+      w="15rem"
+      textTransform="uppercase"
+      bgGradient="linear(to-r, #141E30, #243B55)"
+      _hover={{
+        bgGradient: "linear(to-r, #1e3c72, #2a5298)",
+      }}
+    >
+      {text}
+    </Button>
+  </Link>
 );
 
 function BuyPoolBox() {
   return (
     <VStack
       border="1.5px solid white"
-      py="2rem"
+      py="1.5rem"
       px="4rem"
       fontSize="xl"
       rounded="xl"
       textTransform="uppercase"
       alignItems="flex-start"
-      spacing="3rem"
+      spacing="2.5rem"
     >
       <Box>
         <Text>BUY DGVC</Text>
         <HStack pt="0.5rem" spacing="3rem">
-          <Btn text="with USDC" />
-          <Btn text="with WBTC" />
+          <Btn text="with USDC" href="" />
+          <Btn text="with WBTC" href="" />
         </HStack>
       </Box>
       <Box>
         <Text>Pool DGVC</Text>
         <HStack pt="0.5rem" spacing="3rem">
-          <Btn text="DGVC:USDC" />
-          <Btn text="DGVC:WBTC" />
+          <Btn text="DGVC:USDC" href="" />
+          <Btn text="DGVC:WBTC" href="" />
         </HStack>
       </Box>
     </VStack>
