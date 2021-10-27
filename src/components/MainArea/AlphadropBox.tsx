@@ -51,11 +51,11 @@ function AlphadropBox() {
       >
         <Text>Next Alphadrop in</Text>
         <Spacer />
-        <Text fontSize="4xl" fontFamily="Aldrich">
+        <Text fontSize={{ base: "3xl", md: "4xl" }} fontFamily="Aldrich">
           {timer}
         </Text>
         <Spacer />
-        <Link href="" isExternal>
+        <Link textDecor="underline" href="" isExternal>
           Learn more about Scarcity
         </Link>
       </Flex>

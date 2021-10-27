@@ -12,21 +12,25 @@ function MainArea() {
   return (
     <VStack
       py="2rem"
-      px="4rem"
+      px={{ base: "1rem", md: "4rem" }}
       bgGradient="linear(to-r, #005C97, #363795)"
       color="white"
       align="flex-start"
     >
       <TopLinks />
       <AlphadropBox />
-      <Box pt="2rem" w="100%">
+      <Box pt={{ base: "1rem", md: "2rem" }} w="100%">
         <Flex
           direction={{ base: "column", lg: "row" }}
           alignItems="stretch"
           justifyContent="space-between"
           spacing="2rem"
         >
-          <Box flex={1} pb="2" maxW={{ base: "100%", lg: "34rem" }}>
+          <Box
+            flex={1}
+            pb={{ base: "1", md: "2" }}
+            maxW={{ base: "100%", lg: "34rem" }}
+          >
             <DGVCPrice />
             <Balances />
           </Box>

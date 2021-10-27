@@ -16,7 +16,7 @@ const TokenBalance = ({
 
 function Balances() {
   return (
-    <Box pt="2rem">
+    <Box pt={{ base: "1.5rem", md: "2rem" }}>
       <Box border="1.5px solid white" p="1.5rem" px="2rem" rounded="xl">
         <Heading fontSize="2xl" pb="1rem">
           Balances
