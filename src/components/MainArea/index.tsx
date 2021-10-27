@@ -27,14 +27,14 @@ function MainArea() {
           spacing="2rem"
         >
           <Box
-            flex={1}
+            mr={{ base: "0", lg: "2rem" }}
             pb={{ base: "1", md: "2" }}
-            maxW={{ base: "100%", lg: "34rem" }}
+            w="100%"
           >
             <DGVCPrice />
             <Balances />
           </Box>
-          <Box flex={1} pb="2">
+          <Box pb="2">
             <BuyPoolBox />
             <Flex
               direction={{ base: "column", lg: "row" }}
@@ -49,6 +49,7 @@ function MainArea() {
                 tvl={340}
                 dgvcValue={11}
                 lpValue={22}
+                mr={{ base: "0", lg: "1rem" }}
               />
               <LPInfoCard
                 poolName="DGVC:WBTC"

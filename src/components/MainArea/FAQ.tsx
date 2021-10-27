@@ -10,7 +10,7 @@ import {
 
 function FAQ() {
   return (
-    <Box pt="2rem">
+    <Box pt="2rem" w="100%">
       <Text fontSize="xl" fontWeight="semibold">
         FAQs
       </Text>

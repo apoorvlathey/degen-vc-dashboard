@@ -1,4 +1,12 @@
-import { HStack, Text, Spacer, Heading, Box } from "@chakra-ui/react";
+import { HStack, Text, Spacer, Heading, Box, BoxProps } from "@chakra-ui/react";
+
+interface LPInfoCardProps extends BoxProps {
+  poolName: string;
+  poolPercentage: number;
+  tvl: number;
+  dgvcValue: number;
+  lpValue: number;
+}
 
 function LPInfoCard({
   poolName,
@@ -6,13 +14,8 @@ function LPInfoCard({
   tvl,
   dgvcValue,
   lpValue,
-}: {
-  poolName: string;
-  poolPercentage: number;
-  tvl: number;
-  dgvcValue: number;
-  lpValue: number;
-}) {
+  ...rest
+}: LPInfoCardProps) {
   return (
     <Box
       border="1.5px solid white"
@@ -22,6 +25,7 @@ function LPInfoCard({
       w="100%"
       fontSize="xl"
       rounded="xl"
+      {...rest}
     >
       <Heading fontSize="lg" pb="1rem">
         {poolName}
