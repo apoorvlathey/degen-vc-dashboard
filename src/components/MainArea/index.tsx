@@ -1,4 +1,4 @@
-import { VStack, Stack, Box } from "@chakra-ui/react";
+import { VStack, Box, Flex } from "@chakra-ui/react";
 import AlphadropBox from "./AlphadropBox";
 import ArticlesList from "./ArticlesList";
 import Balances from "./Balances";
@@ -11,8 +11,6 @@ import TopLinks from "./TopLinks";
 function MainArea() {
   return (
     <VStack
-      w="100%"
-      minH="100vh"
       py="2rem"
       px="4rem"
       bgGradient="linear(to-r, #005C97, #363795)"
@@ -22,22 +20,21 @@ function MainArea() {
       <TopLinks />
       <AlphadropBox />
       <Box pt="2rem" w="100%">
-        <Stack
-          direction="row"
+        <Flex
+          direction={{ base: "column", lg: "row" }}
           alignItems="stretch"
           justifyContent="space-between"
           spacing="2rem"
         >
-          <Box flex={1} pb="2" maxW="34rem">
+          <Box flex={1} pb="2" maxW={{ base: "100%", lg: "34rem" }}>
             <DGVCPrice />
             <Balances />
-            <ArticlesList />
           </Box>
           <Box flex={1} pb="2">
             <BuyPoolBox />
-            <Stack
-              direction="row"
-              pt="2rem"
+            <Flex
+              direction={{ base: "column", lg: "row" }}
+              pt={{ base: "0", lg: "2rem" }}
               alignItems="stretch"
               justifyContent="space-between"
               spacing="2rem"
@@ -56,10 +53,16 @@ function MainArea() {
                 dgvcValue={33}
                 lpValue={44}
               />
-            </Stack>
-            <FAQ />
+            </Flex>
           </Box>
-        </Stack>
+        </Flex>
+        <Flex
+          direction={{ base: "column", lg: "row" }}
+          justifyContent="space-between"
+        >
+          <ArticlesList />
+          <FAQ />
+        </Flex>
       </Box>
     </VStack>
   );

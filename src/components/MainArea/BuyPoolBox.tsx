@@ -20,6 +20,7 @@ function BuyPoolBox() {
   return (
     <VStack
       border="1.5px solid white"
+      mt={{ base: "1.5rem", lg: "0" }}
       py="1.5rem"
       px="4rem"
       fontSize="xl"

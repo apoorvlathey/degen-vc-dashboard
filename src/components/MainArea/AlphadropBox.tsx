@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { HStack, Box, Text, Link, Spacer } from "@chakra-ui/react";
+import { Flex, Box, Text, Link, Spacer } from "@chakra-ui/react";
 import { DateTime } from "luxon";
 
 function AlphadropBox() {
@@ -41,7 +41,14 @@ function AlphadropBox() {
 
   return (
     <Box pt="2rem" w="100%">
-      <HStack border="1.5px solid white" py="1.5rem" px="3rem" rounded="xl">
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        border="1.5px solid white"
+        py="1.5rem"
+        px="3rem"
+        rounded="xl"
+        align="center"
+      >
         <Text>Next Alphadrop in</Text>
         <Spacer />
         <Text fontSize="4xl" fontFamily="Aldrich">
@@ -51,7 +58,7 @@ function AlphadropBox() {
         <Link href="" isExternal>
           Learn more about Scarcity
         </Link>
-      </HStack>
+      </Flex>
     </Box>
   );
 }
