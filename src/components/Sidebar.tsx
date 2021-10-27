@@ -1,4 +1,11 @@
-import { VStack, Link, Image } from "@chakra-ui/react";
+import {
+  VStack,
+  Link,
+  Image,
+  StackProps,
+  CloseButton,
+  Center,
+} from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDiscord,
@@ -14,12 +21,28 @@ const SocialIcon = ({ link, icon }: { link: string; icon: IconDefinition }) => (
   </Link>
 );
 
-function Sidebar() {
+interface SidebarProps extends StackProps {
+  onClose: () => void;
+}
+
+function Sidebar({ onClose, ...rest }: SidebarProps) {
   return (
-    <VStack flex="1" bg="#261E35" px="1.5rem" minH="100vh" color="white">
-      <Link pt="2rem" href="/">
-        <Image src="/images/degen-vc-logo.png" w="3rem" />
-      </Link>
+    <VStack
+      flex="1"
+      bg="#261E35"
+      px="1.5rem"
+      w={{ base: "full", md: 40 }}
+      pos="fixed"
+      h="full"
+      color="white"
+      {...rest}
+    >
+      <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
+      <Center>
+        <Link pt="2rem" href="/">
+          <Image src="/images/degen-vc-logo.png" w="3rem" />
+        </Link>
+      </Center>
       <VStack pt="3rem" spacing="6">
         <SocialIcon
           link="https://discord.com/invite/qK8uUqc9Jd"

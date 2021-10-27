@@ -1,4 +1,4 @@
-import { VStack, Stack, Center, Heading, Text, Box } from "@chakra-ui/react";
+import { VStack, Stack, Box } from "@chakra-ui/react";
 import AlphadropBox from "./AlphadropBox";
 import ArticlesList from "./ArticlesList";
 import Balances from "./Balances";
